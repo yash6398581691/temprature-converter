@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature converter</title>
+</head>
+
+    <body>
+    <label>Celsius</label>
+    <input type="number" id="cel" value="0"><br><br>
+    <label>Fahrenheit</label>
+    <input type="number" id="fah" value="32">
+
+  <script>
+  var cel = document.getElementById('cel');
+  var fah = document.getElementById('fah');
+  cel.addEventListener('input', function(){
+    
+    var c=this.value;
+    var f=(c * 9/5) + 32;
+    fah.value=f;;
+   
+  })
+  fah.addEventListener('input', function(){
+    var f=this.value;
+    var c=(f -32) * 5/9;
+    cel.value=c;
+  })
+
+  </script>
+</body>
+</html>
